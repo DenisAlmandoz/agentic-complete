@@ -1,0 +1,11 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.8
+pydantic-settings>=2.4
+openai>=1.40
+pymongo>=4.8
+loguru>=0.7
+click>=8.1
+python-multipart>=0.0.9
+langfuse>=3.0
+numpy>=2.0

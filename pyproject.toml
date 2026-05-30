@@ -1,0 +1,37 @@
+[project]
+name = "agentic-language-tutor"
+version = "0.1.0"
+description = "Agentic RAG language-learning voice tutor powered by Grok, FastAPI, MongoDB, Whisper, and Langfuse."
+authors = [{ name = "Agentic Complete", email = "dev@example.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "openai>=1.40",
+  "pymongo>=4.8",
+  "loguru>=0.7",
+  "click>=8.1",
+  "python-multipart>=0.0.9",
+  "langfuse>=3.0",
+  "numpy>=2.0",
+]
+
+[project.scripts]
+language-tutor = "api.cli:cli"
+
+[tool.poetry]
+packages = [{ include = "api" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["api/tests"]
+pythonpath = ["."]

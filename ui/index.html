@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Language Tutor</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Grok-powered agentic RAG tutor</p>
+        <h1>Practice English or Spanish with a specialized AI voice teacher.</h1>
+        <p>Choose a topic, speak or type, and let the teacher, examiner, and readiness assessor decide when you are ready for the next CEFR level.</p>
+      </section>
+
+      <section class="panel">
+        <label>Target language
+          <select id="targetLanguage">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+          </select>
+        </label>
+        <label>Topic
+          <input id="topic" value="travel conversations" />
+        </label>
+        <label>Agent
+          <select id="agent">
+            <option value="">Auto coordinator</option>
+            <option value="teacher">Teacher</option>
+            <option value="examiner">Examiner</option>
+            <option value="readiness_assessor">Readiness assessor</option>
+          </select>
+        </label>
+        <label>Message
+          <textarea id="message" placeholder="Write or paste your spoken transcription here..."></textarea>
+        </label>
+        <button id="sendButton">Send turn</button>
+      </section>
+
+      <section class="panel response-panel">
+        <h2>Agent response</h2>
+        <pre id="response">Waiting for your first practice turn...</pre>
+      </section>
+    </main>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
